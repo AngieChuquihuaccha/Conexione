@@ -1,0 +1,28 @@
+package conexion2;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+import java.sql.DriverManager;
+
+public class Conexion2 {
+
+    /**
+     * @param args the command line arguments
+     * @throws java.lang.ClassNotFoundException
+     * @throws java.sql.SQLException
+     */
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+      Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+      String connectionURL = "jdbc:sqlserver://DESKTOP-FSBBPQ7:1433;databaseName=Softfit1;user=sql;password=123;";
+      Connection con = DriverManager.getConnection(connectionURL);
+      System.out.println("Nos Conectamos");
+      
+      
+      
+    }
+    
+}
